@@ -1,17 +1,16 @@
 <template>
   <div id="app" class="bg-light h-screen">
-    <Navigation />
     <router-view />
   </div>
 </template>
 
 <script>
-import Navigation from "@/components/Navigation.vue";
+//import Navigation from "@/components/Navigation.vue";
 
 export default {
-  components: {
+  /*components: {
     Navigation
-  },
+  }, */
 
   mounted() {
     this.$store.commit("LOGIN", !!localStorage.getItem("token"));
