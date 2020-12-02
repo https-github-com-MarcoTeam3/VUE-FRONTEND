@@ -1,26 +1,24 @@
 <template>
-  <div id="app" class="bg-light h-screen">
-    <Navigation />
-    <router-view />
-  </div>
+  <v-app>
+    <Nav />
+    <v-content>
+    <router-view></router-view>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import Navigation from "@/components/Navigation.vue";
+import Nav from './components/Nav.vue';
 
 export default {
+  name: "App",
+
   components: {
-    Navigation
+    Nav
   },
 
-  mounted() {
-    this.$store.commit("LOGIN", !!localStorage.getItem("token"));
-  }
+  data: () => ({
+    //
+  })
 };
 </script>
-
-<style>
-.h-screen {
-  height: 100vh;
-}
-</style>
