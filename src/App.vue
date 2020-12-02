@@ -1,24 +1,26 @@
 <template>
-  <v-app>
-    <Nav />
-    <v-content>
-    <router-view></router-view>
-    </v-content>
+<v-app>
+    <v-main>
+      <HelloWorld />
+      <NavigationHome />
+    </v-main>
   </v-app>
 </template>
 
 <script>
-import Nav from './components/Nav.vue';
+import NavigationHome from './components/NavigationHome.vue';
+import HelloWorld from './components/HelloWorld.vue';
 
 export default {
   name: "App",
 
   components: {
-    Nav
+    HelloWorld,
+    NavigationHome
   },
 
-  data: () => ({
-    //
-  })
+  // data: () => ({
+  //   //
+  // })
 };
 </script>
