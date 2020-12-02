@@ -1,23 +1,25 @@
 <template>
-<v-app>
-    <v-main>
-      <NavigationHome />
-    </v-main>
-  </v-app>
+  <div id="app" class="bg-light h-screen">
+    <router-view />
+  </div>
 </template>
 
 <script>
-import NavigationHome from './components/NavigationHome.vue';
+//import Navigation from "@/components/Navigation.vue";
 
 export default {
-  name: "App",
+  /*components: {
+    Navigation
+  }, */
 
-  components: {
-    NavigationHome
-  },
-
-  // data: () => ({
-  //   //
-  // })
+  mounted() {
+    this.$store.commit("LOGIN", !!localStorage.getItem("token"));
+  }
 };
 </script>
+
+<style>
+.h-screen {
+  height: 100vh;
+}
+</style>
