@@ -1,7 +1,6 @@
 <template>
 <v-app>
     <v-main>
-      <HelloWorld />
       <NavigationHome />
     </v-main>
   </v-app>
@@ -9,13 +8,11 @@
 
 <script>
 import NavigationHome from './components/NavigationHome.vue';
-import HelloWorld from './components/HelloWorld.vue';
 
 export default {
   name: "App",
 
   components: {
-    HelloWorld,
     NavigationHome
   },
 
