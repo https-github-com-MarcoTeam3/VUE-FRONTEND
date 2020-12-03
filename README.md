@@ -36,6 +36,17 @@ npm run build
 npm run lint
 ```
 
+### Functionalites
+
+```
+Register your user to access login
+```
+
+```
+Login to acces your dashboard
+```
+
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
