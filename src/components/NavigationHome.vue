@@ -2,9 +2,6 @@
   <header class="header">
     <nav class="navbar navbar-expand-lg fixed-top py-3">
       <div class="container">
-        <a href="#" class="navbar-brand text-uppercase font-weight-bold"
-          >SGM SHOP</a
-        >
         <button
           type="button"
           data-toggle="collapse"
@@ -145,9 +142,9 @@ export default {
 }
 header {
   width: 100%;
-  height: 300px;
-  background: url(https://i.postimg.cc/6QVCtH08/Sans-titre.png) no-repeat top center;
+  height: 200px;
+  background: url(https://i.postimg.cc/130hsgW5/Sans-titre-2.png) top center;
   background-size: cover;
-}
+} 
 
 </style>
