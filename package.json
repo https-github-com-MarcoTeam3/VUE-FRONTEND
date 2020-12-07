@@ -1,9 +1,8 @@
 {
-  "name": "vue-sanctum",
+  "name": "sgm_inc",
   "version": "0.1.0",
-  "private": true,
-  "description": "## Project setup",
-  "author": "",
+  "description": "vuejs app for e-commerce",
+  "author": "Marco Gargani & Sharif",
   "engines": {
     "node": "15.2.0"
   },
@@ -34,7 +33,7 @@
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-plugin-router": "~4.2.0",
-    "@vue/cli-service": "~4.2.0",
+    "@vue/cli-service": "^4.2.3",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
