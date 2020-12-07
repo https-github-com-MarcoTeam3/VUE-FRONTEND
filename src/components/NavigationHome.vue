@@ -15,6 +15,22 @@
         </button>
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
+                        <li>
+               <router-link
+                v-if="!isLoggedIn || isLoggedIn"
+                class="nav-item nav-link"
+                :to="{ name: '/' }"
+                ><i class="fas fa-home"></i></router-link
+              >
+            </li>
+            <li>
+               <router-link
+                v-if="!isLoggedIn || isLoggedIn"
+                class="nav-item nav-link"
+                :to="{ name: 'Shop' }"
+                >Shop</router-link
+              >
+            </li>
             <li>
               <router-link
                 v-if="!isLoggedIn"
@@ -145,6 +161,5 @@ header {
   height: 200px;
   background: url(https://i.postimg.cc/130hsgW5/Sans-titre-2.png) top center;
   background-size: cover;
-} 
-
+}
 </style>
