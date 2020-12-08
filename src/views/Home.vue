@@ -1,27 +1,6 @@
 <template>
   <div>
     <!-- /.col-lg-3 -->
-     <v-container class="grey lighten-5">
-    <v-row
-      v-for="j in justify"
-      :key="j"
-      :justify="j"
-    >
-      <v-col
-        v-for="k in 2"
-        :key="k"
-        md="4"
-      >
-        <v-card
-          class="pa-2"
-          outlined
-          tile
-        >
-          One of two columns
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
     <div class="container mt-4">
       <h2 style="text-align: center;">Explore Popular Categories</h2>
     </div>
@@ -35,7 +14,7 @@
   </v-carousel>
   </div>
   <v-container>
-    <h2 style="text-align: center;">More than <strong class="purple lighten-4--text">50</strong> brands in stock</h2>
+    <h2 style="text-align: center;">More than <strong class="purple--text">50</strong> brands in stock SHARIF</h2>
   </v-container>
   <v-container>
   <v-row>
