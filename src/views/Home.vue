@@ -1,96 +1,86 @@
 <template>
   <div>
-    <!-- /.col-lg-3 -->
-     <v-container class="grey lighten-5">
-    <v-row
-      v-for="j in justify"
-      :key="j"
-      :justify="j"
-    >
-      <v-col
-        v-for="k in 2"
-        :key="k"
-        md="4"
-      >
-        <v-card
-          class="pa-2"
-          outlined
-          tile
-        >
-          One of two columns
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+    <v-container style="text-align: center;">
+      <h2>
+      <vue-typer
+        :text="['BLACK FRIDAY!!', 'MERRY CHRISTMAS', '-50% ALL WATCH']"
+        :repeat="Infinity"
+        :shuffle="false"
+        initial-action="typing"
+        :pre-type-delay="70"
+        :type-delay="70"
+        :pre-erase-delay="2000"
+        :erase-delay="250"
+        erase-style="backspace"
+        :erase-on-complete="false"
+        caret-animation="solid"
+      ></vue-typer>
+      </h2>
+    </v-container>
     <div class="container mt-4">
       <h2 style="text-align: center;">Explore Popular Categories</h2>
     </div>
     <div class="container">
-  <v-carousel hide-delimiters>
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-    ></v-carousel-item>
-  </v-carousel>
-  </div>
-  <v-container>
-    <h2 style="text-align: center;">More than <strong class="purple lighten-4--text">50</strong> brands in stock</h2>
-  </v-container>
-  <v-container>
-  <v-row>
-    <v-col
-      cols="4"
-      sm="2"
-    >
-      <v-img
-        src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_101-8cca61e9947991b93447da23685a1487.png"
-      ></v-img>
-    </v-col>
+      <v-carousel hide-delimiters>
+        <v-carousel-item
+          v-for="(item, i) in items"
+          :key="i"
+          :src="item.src"
+        ></v-carousel-item>
+      </v-carousel>
+    </div>
+    <v-container>
+      <h2 style="text-align: center;">
+        More than <strong class="red--text">50</strong> brands in
+        stock
+      </h2>
+    </v-container>
+    <v-container>
+      <v-row>
+        <v-col cols="4" sm="2">
+          <v-img
+            src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_101-8cca61e9947991b93447da23685a1487.png"
+          ></v-img>
+        </v-col>
 
-    <v-col
-      cols="2"
-      sm="2"
-    >
-      <v-img src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_24-383e327d60d2139fb186507a45652764.png">
-        <div class="fill-height bottom-gradient"></div>
-      </v-img>
-    </v-col>
+        <v-col cols="2" sm="2">
+          <v-img
+            src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_24-383e327d60d2139fb186507a45652764.png"
+          >
+            <div class="fill-height bottom-gradient"></div>
+          </v-img>
+        </v-col>
 
-    <v-col
-      cols="2"
-      sm="2"
-    >
-      <v-img src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_18-f3f6266331b95cfa3cdd11a48c1562b1.png">
-        <div class="fill-height repeating-gradient"></div>
-      </v-img>
-    </v-col>
-        <v-col
-      cols="2"
-      sm="2"
-    >
-      <v-img src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_32-27e9e26456ad9896cd9d3215c1939aa1.png">
-        <div class="fill-height repeating-gradient"></div>
-      </v-img>
-    </v-col>
-        <v-col
-      cols="2"
-      sm="2"
-    >
-      <v-img src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_129-cdbaa6a05e2ccfe9974c75a1c60f200a.png">
-        <div class="fill-height repeating-gradient"></div>
-      </v-img>
-    </v-col>
-            <v-col
-      cols="2"
-      sm="2"
-    >
-      <v-img src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_69-1fae709476e0b6e2660bcdee0c60345d.png">
-        <div class="fill-height repeating-gradient"></div>
-      </v-img>
-    </v-col>
-  </v-row>
-  </v-container>
+        <v-col cols="2" sm="2">
+          <v-img
+            src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_18-f3f6266331b95cfa3cdd11a48c1562b1.png"
+          >
+            <div class="fill-height repeating-gradient"></div>
+          </v-img>
+        </v-col>
+        <v-col cols="2" sm="2">
+          <v-img
+            src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_32-27e9e26456ad9896cd9d3215c1939aa1.png"
+          >
+            <div class="fill-height repeating-gradient"></div>
+          </v-img>
+        </v-col>
+        <v-col cols="2" sm="2">
+          <v-img
+            src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_129-cdbaa6a05e2ccfe9974c75a1c60f200a.png"
+          >
+            <div class="fill-height repeating-gradient"></div>
+          </v-img>
+        </v-col>
+        <v-col cols="2" sm="2">
+          <v-img
+            src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_69-1fae709476e0b6e2660bcdee0c60345d.png"
+          >
+            <div class="fill-height repeating-gradient"></div>
+          </v-img>
+        </v-col>
+      </v-row>
+    </v-container>
     <v-container>
       <v-row no-gutters>
         <v-col :cols="12">
@@ -201,29 +191,63 @@
 
 <script>
 import Footer from "@/components/Footer.vue";
+import { VueTyper } from "vue-typer";
 
 export default {
   components: {
-    Footer
+    Footer,
+    "vue-typer": VueTyper,
   },
-   data () {
-      return {
-        items: [
-          {
-            src: 'https://d2yac1vwzyjed0.cloudfront.net/attachment/Attachment/1420/m_co_hp.jpg',
-          },
-          {
-            src: 'https://d2yac1vwzyjed0.cloudfront.net/attachment/Attachment/1434/m_co_hp.jpg',
-          },
-          {
-            src: 'https://d2yac1vwzyjed0.cloudfront.net/attachment/Attachment/1442/m_co_hp.jpg',
-          },
-          {
-            src: 'https://d2yac1vwzyjed0.cloudfront.net/attachment/Attachment/513/m_co_hp_herbelin.jpg',
-          },
-        ],
-      }
-    },
-  name: "Home"
+  data() {
+    return {
+      items: [
+        {
+          src:
+            "https://d2yac1vwzyjed0.cloudfront.net/attachment/Attachment/1420/m_co_hp.jpg",
+        },
+        {
+          src:
+            "https://d2yac1vwzyjed0.cloudfront.net/attachment/Attachment/1434/m_co_hp.jpg",
+        },
+        {
+          src:
+            "https://d2yac1vwzyjed0.cloudfront.net/attachment/Attachment/1442/m_co_hp.jpg",
+        },
+        {
+          src:
+            "https://d2yac1vwzyjed0.cloudfront.net/attachment/Attachment/513/m_co_hp_herbelin.jpg",
+        },
+      ],
+    };
+  },
+  name: "Home",
 };
 </script>
+
+<style>
+@keyframes rocking {
+  0%,100% {transform: rotateZ(-10deg);}
+  50%     {transform: rotateZ(10deg);}
+}
+.vue-typer {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+.vue-typer .custom.char.typed {
+  color: #960000;
+}
+.vue-typer .custom.char.selected {
+  color: #E91E63;
+}
+
+.vue-typer .custom.caret {
+  animation: rocking 1s ease-in-out 0s infinite;
+}
+.vue-typer .custom.caret.typing {
+  background-color: #962300;
+}
+.vue-typer .custom.caret.selecting {
+  display: inline-block;
+  background-color: #E91E63;
+}
+
+</style>
