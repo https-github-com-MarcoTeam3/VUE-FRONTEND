@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <NavigationHome></NavigationHome>
-
+  <v-app>
     <v-container>
       <v-carousel
         cycle
@@ -74,7 +72,7 @@
             <div
               class="col-md-3 col-sm-6 col-xs-12"
               :key="info.id"
-              v-for="info in products"
+              v-for="info in info"
             >
               <v-hover v-slot:default="{ hover }">
                 <v-card class="mx-auto" color="grey lighten-4" max-width="600">
@@ -82,24 +80,26 @@
                     class="white--text align-end"
                     :aspect-ratio="16 / 9"
                     height="200px"
-                    :src="info.src"
+                    :src="info.pro_photo"
                   >
                     <!-- <v-card-title>{{ info.name }} </v-card-title> -->
                     <v-expand-transition>
                       <div
                         v-if="hover"
-                        class="row transition-fast-in-fast-out white darken-2 v-card--reveal display-3 white--text"
+                        class="d-flex transition-fast-in-fast-out white darken-2 v-card--reveal display-3 white--text"
                         style="height: 100%;"
-                      ></div>
+                      >
+                        <v-btn v-if="hover" href="/product" class="" outlined>VIEW</v-btn>
+                      </div>
                     </v-expand-transition>
                   </v-img>
                   <v-card-text class="text--primary">
                     <div>
-                      <a href="/product" style="text-decoration: none">{{
-                        info.name
-                      }}</a>
+                      <a href="/product" style="text-decoration: none">
+                      {{  info.title }}
+                      </a>
                     </div>
-                    <div>{{ info.price }}</div>
+                    <div>{{ info.price }}€</div>
                     <div><i class="fas fa-shopping-cart"></i></div>
                   </v-card-text>
                 </v-card>
@@ -112,7 +112,7 @@
     <div>
       <Footer></Footer>
     </div>
-  </div>
+  </v-app>
 </template>
 <style>
 .v-card--reveal {
@@ -126,9 +126,9 @@
 </style>
 <script>
 import Footer from "../components/Footer.vue";
-import NavigationHome from "../components/NavigationHome.vue";
+
 export default {
-  components: { NavigationHome, Footer },
+  components: { Footer },
   data: () => ({
     message: "SHOP",
     info: null,
@@ -149,8 +149,6 @@ export default {
         href: "/",
       },
     ],
-    min: 0,
-    max: 10000,
     items: [
       {
         id: 1,
@@ -163,74 +161,12 @@ export default {
         ],
       },
     ],
-    products: [
-      {
-        name: "Apple Silver Chain",
-        type: "Jackets",
-        price: "18",
-        src: require("../assets/img/shop/unknown1.png"),
-      },
-      {
-        name: "Garmin Black",
-        type: "Polo",
-        price: "40.00",
-        src: require("../assets/img/shop/unknown2.png"),
-      },
-      {
-        name: "Zara limited...",
-        type: "Denim",
-        price: "25.00",
-        src: require("../assets/img/shop/unknown3.png"),
-      },
-      {
-        name: "SKULL TEE",
-        type: "Jackets",
-        price: "30.00",
-        src: require("../assets/img/shop/unknown4.png"),
-      },
-      {
-        name: "MANGO WINTER",
-        type: "Sweaters",
-        price: "50.00",
-        src: require("../assets/img/shop/unknown5.png"),
-      },
-      {
-        name: "SHIRT",
-        type: "Denim",
-        price: "34.00",
-        src: require("../assets/img/shop/unknown6.png"),
-      },
-      {
-        name: "TRUCKER JACKET",
-        type: "Jackets",
-        price: "38.00",
-        src: require("../assets/img/shop/unknown7.png"),
-      },
-      {
-        name: "COATS",
-        type: "Jackets",
-        price: "25.00",
-        src: require("../assets/img/shop/unknown8.png"),
-      },
-      {
-        name: "MANGO WINTER",
-        type: "Sweaters",
-        price: "50.00",
-        src: require("../assets/img/shop/unknown9.png"),
-      },
-      {
-        name: "SHIRT",
-        type: "Denim",
-        price: "34.00",
-        src: require("../assets/img/shop/unknown10.png"),
-      },
-    ],
   }),
   mounted() {
     this.$axios
       .get("http://localhost:8000/api/products")
       .then((response) => {
-        this.info = console.log(response.data[0].price);
+        this.info = response.data;
       })
       .catch((error) => {
         console.log(error);

@@ -1,16 +1,17 @@
 <template>
-  <div id="app">
+  <v-app id="app">
+    <NavigationHome/>
     <router-view />
-  </div>
+  </v-app>
 </template>
 
 <script>
-//import Navigation from "@/components/Navigation.vue";
+import NavigationHome from "@/components/NavigationHome.vue";
 
 export default {
-  /*components: {
-    Navigation
-  }, */
+  components: {
+    NavigationHome
+  }, 
 
   mounted() {
     this.$store.commit("LOGIN", !!localStorage.getItem("token"));
