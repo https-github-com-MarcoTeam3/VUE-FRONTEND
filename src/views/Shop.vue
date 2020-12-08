@@ -133,7 +133,7 @@ export default {
     message: "SHOP",
     info: null,
     loading: true,
-    errored: false,
+   
     colors: [
       "indigo",
       "warning",
@@ -167,10 +167,6 @@ export default {
       .get("https://thawing-ravine-80622.herokuapp.com/api/products")
       .then((response) => {
         this.info = response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-        this.errored = true;
       })
       .finally(() => (this.loading = false));
   },
