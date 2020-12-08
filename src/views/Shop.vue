@@ -164,7 +164,7 @@ export default {
   }),
   mounted() {
     this.$axios
-      .get("http://localhost:8000/api/products")
+      .get("https://thawing-ravine-80622.herokuapp.com/api/products")
       .then((response) => {
         this.info = response.data;
       })
