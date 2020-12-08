@@ -132,8 +132,6 @@ export default {
   data: () => ({
     message: "SHOP",
     info: null,
-    loading: true,
-    errored: false,
     colors: [
       "indigo",
       "warning",
@@ -164,13 +162,9 @@ export default {
   }),
   mounted() {
     this.$axios
-      .get("http://localhost:8000/api/products")
+      .get("https://thawing-ravine-80622.herokuapp.com/api/products")
       .then((response) => {
         this.info = response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-        this.errored = true;
       })
       .finally(() => (this.loading = false));
   },
