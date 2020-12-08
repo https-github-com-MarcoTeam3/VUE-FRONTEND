@@ -1,7 +1,7 @@
 import axios from "axios";
 
 let BaseApi = axios.create({
-  baseURL: "http://thawing-ravine-80622.herokuapp.com/api/"
+  baseURL: "https://thawing-ravine-80622.herokuapp.com/api/"
 });
 
 let Api = function() {
