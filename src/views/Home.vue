@@ -5,6 +5,7 @@
 
 <template>
   <div>
+<<<<<<< HEAD
     <v-container style="text-align: center">
       <h2>
         <vue-typer
@@ -22,10 +23,14 @@
         ></vue-typer>
       </h2>
     </v-container>
+=======
+    <!-- /.col-lg-3 -->
+>>>>>>> dd699c598dd92d37e4b28c02d7993d7b9f8ea3f7
     <div class="container mt-4">
       <h2 style="text-align: center">Explore Popular Categories</h2>
     </div>
     <div class="container">
+<<<<<<< HEAD
       <v-carousel hide-delimiters>
         <v-carousel-item
           v-for="(item, i) in items"
@@ -85,6 +90,73 @@
         </v-col>
       </v-row>
     </v-container>
+=======
+  <v-carousel hide-delimiters>
+    <v-carousel-item
+      v-for="(item,i) in items"
+      :key="i"
+      :src="item.src"
+    ></v-carousel-item>
+  </v-carousel>
+  </div>
+  <v-container>
+    <h2 style="text-align: center;">More than <strong class="purple--text">50</strong> brands in stock SHARIF</h2>
+  </v-container>
+  <v-container>
+  <v-row>
+    <v-col
+      cols="4"
+      sm="2"
+    >
+      <v-img
+        src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_101-8cca61e9947991b93447da23685a1487.png"
+      ></v-img>
+    </v-col>
+
+    <v-col
+      cols="2"
+      sm="2"
+    >
+      <v-img src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_24-383e327d60d2139fb186507a45652764.png">
+        <div class="fill-height bottom-gradient"></div>
+      </v-img>
+    </v-col>
+
+    <v-col
+      cols="2"
+      sm="2"
+    >
+      <v-img src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_18-f3f6266331b95cfa3cdd11a48c1562b1.png">
+        <div class="fill-height repeating-gradient"></div>
+      </v-img>
+    </v-col>
+        <v-col
+      cols="2"
+      sm="2"
+    >
+      <v-img src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_32-27e9e26456ad9896cd9d3215c1939aa1.png">
+        <div class="fill-height repeating-gradient"></div>
+      </v-img>
+    </v-col>
+        <v-col
+      cols="2"
+      sm="2"
+    >
+      <v-img src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_129-cdbaa6a05e2ccfe9974c75a1c60f200a.png">
+        <div class="fill-height repeating-gradient"></div>
+      </v-img>
+    </v-col>
+            <v-col
+      cols="2"
+      sm="2"
+    >
+      <v-img src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_69-1fae709476e0b6e2660bcdee0c60345d.png">
+        <div class="fill-height repeating-gradient"></div>
+      </v-img>
+    </v-col>
+  </v-row>
+  </v-container>
+>>>>>>> dd699c598dd92d37e4b28c02d7993d7b9f8ea3f7
     <v-container>
       <v-row no-gutters>
         <v-col :cols="12">

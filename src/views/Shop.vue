@@ -132,6 +132,11 @@ export default {
   data: () => ({
     message: "SHOP",
     info: null,
+<<<<<<< HEAD
+=======
+    loading: true,
+   
+>>>>>>> dd699c598dd92d37e4b28c02d7993d7b9f8ea3f7
     colors: [
       "indigo",
       "warning",
