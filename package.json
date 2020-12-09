@@ -6,7 +6,6 @@
   "engines": {
     "node": "15.2.0"
   },
-
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -14,6 +13,7 @@
   },
   "main": ".eslintrc.js",
   "dependencies": {
+    "@vue/cli": "^4.5.9",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "core-js": "^3.6.4",
