@@ -1,9 +1,12 @@
 {
-  "name": "vue-sanctum",
+  "name": "sgm-luxury.inc",
   "version": "0.1.0",
-  "private": true,
-  "description": "## Project setup",
-  "author": "",
+  "description": "ecommerce site",
+  "author": "Marco, Gargani, & Sharif",
+  "engines": {
+    "node": "15.2.0"
+  },
+
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
