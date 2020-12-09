@@ -1,7 +1,10 @@
 .DS_Store
 node_modules
 .env.local
-/dist
+/dist/css
+/dist/fonts
+/dist/img
+
 
 
 # local env files
