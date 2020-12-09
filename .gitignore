@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 .env.local
-/dist/css
+
 /dist/fonts
 
 
