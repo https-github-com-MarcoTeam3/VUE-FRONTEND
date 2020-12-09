@@ -7,9 +7,13 @@
     "node": "15.2.0"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "postinstall": "NODE_ENV=development && npm run client-install && npm run client-build && NODE_ENV=production",
+    "client": "npm start --prefix client",
+    "client-build": "npm run build --prefix client",
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js --ignore client",
+    "dev": "concurrently  \"npm run server\" \"npm run client\""
   },
   "main": ".eslintrc.js",
   "dependencies": {
@@ -17,9 +21,11 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "core-js": "^3.6.4",
+    "express": "^4.17.1",
     "jquery": "^3.4.1",
     "js-cookie": "^2.2.1",
     "popper.js": "^1.16.1",
+    "server-static": "^2.0.5",
     "vue": "^2.6.11",
     "vue-axios": "^3.2.0",
     "vue-router": "^3.1.5",
