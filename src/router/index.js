@@ -4,7 +4,9 @@ import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Dashboard from "../views/Dashboard.vue";
-import Shop from "../views/Shop.vue"
+import Shop from "../views/Shop.vue";
+import Cart from "../views/Cart.vue";
+import Product from "../views/Product.vue";
 
 Vue.use(VueRouter);
 
@@ -15,9 +17,20 @@ const routes = [
     component: Home
   },
   {
+    path: "/cart",
+    name: "Cart",
+    component: Cart,
+    meta: { authOnly: true }
+  },
+  {
     path: "/Shop",
     name: "Shop",
     component: Shop
+  },
+  {
+    path:'/product',
+      component:Product,
+    name:'Product'
   },
   {
     path: "/login",

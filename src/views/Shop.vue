@@ -89,18 +89,24 @@
                         class="d-flex transition-fast-in-fast-out white darken-2 v-card--reveal display-3 white--text"
                         style="height: 100%;"
                       >
-                        <v-btn v-if="hover" href="/product" class="" outlined>VIEW</v-btn>
+                        <v-btn v-if="hover" href="/product" class="" outlined
+                          >VIEW</v-btn
+                        >
                       </div>
                     </v-expand-transition>
                   </v-img>
                   <v-card-text class="text--primary">
                     <div>
                       <a href="/product" style="text-decoration: none">
-                      {{  info.title }}
+                        {{ info.title }}
                       </a>
                     </div>
                     <div>{{ info.price }}€</div>
-                    <div><i class="fas fa-shopping-cart"></i></div>
+                    <div>
+                      <v-btn class="success" depressed elevation="2" outlined>
+                        <i class="fas fa-shopping-cart"></i>
+                      </v-btn>
+                    </div>
                   </v-card-text>
                 </v-card>
               </v-hover>

@@ -15,16 +15,25 @@
         </button>
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
-                        <li>
-               <router-link
+            <li>
+              <router-link
+                v-if="isLoggedIn"
+                class="nav-item nav-link"
+                :to="{ name: 'Cart' }"
+                ><i class="fas fa-shopping-cart"></i
+              ></router-link>
+            </li>
+
+            <li>
+              <router-link
                 v-if="!isLoggedIn || isLoggedIn"
                 class="nav-item nav-link"
-                :to="{ name: '/' }"
-                ><i class="fas fa-home"></i></router-link
-              >
+                :to="{ name: 'Home' }"
+                ><i class="fas fa-home"></i
+              ></router-link>
             </li>
             <li>
-               <router-link
+              <router-link
                 v-if="!isLoggedIn || isLoggedIn"
                 class="nav-item nav-link"
                 :to="{ name: 'Shop' }"
