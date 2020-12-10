@@ -2,12 +2,6 @@
   <div>
     <div class="container">
       <h1>Dashboard</h1>
-      <!-- <div class="card">
-        <div class="card-body" v-if="user">
-          <h3>Hello, {{ user.name }}</h3>
-          <span>{{ user.email }}</span>
-        </div>
-      </div> -->
     </div>
     <v-container id="user-profile" fluid tag="section">
       <v-row justify="center">

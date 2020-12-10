@@ -115,7 +115,10 @@
     </div>
   </v-app>
 </template>
+<<<<<<< HEAD
 
+=======
+>>>>>>> fb56cd623bff9ee4b80a2d026588cfd588e8c780
 <script>
 import Footer from "../components/Footer.vue";
 import Carousel from "../components/Carousel.vue";
@@ -126,7 +129,18 @@ export default {
     message: "SHOP",
     products: null,
     loading: true,
+<<<<<<< HEAD
     errored: false,
+=======
+    colors: [
+      "indigo",
+      "warning",
+      "pink darken-2",
+      "red lighten-1",
+      "deep-purple accent-4",
+    ],
+    slides: ["First", "Second", "Third", "Fourth", "Fifth"],
+>>>>>>> fb56cd623bff9ee4b80a2d026588cfd588e8c780
     breadcrums: [
       {
         text: "Home",
@@ -149,13 +163,13 @@ export default {
   }),
   mounted() {
     this.$axios
+<<<<<<< HEAD
       .get("http://localhost:8000/api/products/")
+=======
+      .get("https://thawing-ravine-80622.herokuapp.com/api/products")
+>>>>>>> fb56cd623bff9ee4b80a2d026588cfd588e8c780
       .then((response) => {
         this.products = response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-        this.errored = true;
       })
       .finally(() => (this.loading = false));
   },
