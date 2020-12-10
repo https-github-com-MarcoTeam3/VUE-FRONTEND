@@ -70,7 +70,6 @@ export default {
     add_cart() {
       this.$store.state.cart_count += 1;
       this.$store.state.cart.push(this.product);
-      console.log(this.$store.state.cart);
     },
   },
   mounted() {
