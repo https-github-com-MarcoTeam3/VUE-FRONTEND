@@ -28,8 +28,8 @@ const routes = [
     component: Shop
   },
   {
-    path:'/product',
-      component:Product,
+    path:'/product/:id',
+    component: Product,
     name:'Product'
   },
   {
