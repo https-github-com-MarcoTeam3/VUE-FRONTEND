@@ -67,10 +67,10 @@ export default {
       .then((response) => {
         this.product = response.data;
       })
-      .catch((error) => {
-        console.log(error);
-        this.errored = true;
-      })
+      // .catch((error) => {
+      //   console.log(error);
+      //   this.errored = true;
+      // })
       .finally(() => (this.loading = false));
   },
 };
