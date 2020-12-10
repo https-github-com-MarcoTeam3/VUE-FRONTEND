@@ -1,22 +1,8 @@
 <template>
   <v-app>
-    <v-container>
-      <v-carousel
-        cycle
-        height="300"
-        hide-delimiter-background
-        show-arrows-on-hover
-      >
-        <v-carousel-item v-for="(slide, i) in slides" :key="i">
-          <v-sheet :color="colors[i]" height="100%">
-            <v-row class="fill-height" align="center" justify="center">
-              <div class="display-3">{{ slide }} Slide</div>
-            </v-row>
-          </v-sheet>
-        </v-carousel-item>
-      </v-carousel>
+    <v-container class="pt-12">
+      <Carousel />
     </v-container>
-
     <v-container>
       <div class="row">
         <div class="col-md-3 col-sm-3 col-xs-12">
@@ -71,8 +57,8 @@
           <div class="row text-center">
             <div
               class="col-md-3 col-sm-6 col-xs-12"
-              :key="info.id"
-              v-for="info in info"
+              v-for="product in products"
+              :key="product.id"
             >
               <v-hover v-slot:default="{ hover }">
                 <v-card class="mx-auto" color="grey lighten-4" max-width="600">
@@ -80,7 +66,7 @@
                     class="white--text align-end"
                     :aspect-ratio="16 / 9"
                     height="200px"
-                    :src="info.pro_photo"
+                    :src="product.pro_photo"
                   >
                     <!-- <v-card-title>{{ info.name }} </v-card-title> -->
                     <v-expand-transition>
@@ -89,21 +75,30 @@
                         class="d-flex transition-fast-in-fast-out white darken-2 v-card--reveal display-3 white--text"
                         style="height: 100%;"
                       >
-                        <v-btn v-if="hover" href="/product" class="" outlined
-                          >VIEW</v-btn
+                        <router-link
+                          :to="{ name: 'Product', params: { id: product.id } }"
                         >
+                          <v-btn v-if="hover" outlined>VIEW</v-btn>
+                        </router-link>
                       </div>
                     </v-expand-transition>
                   </v-img>
                   <v-card-text class="text--primary">
                     <div>
                       <a href="/product" style="text-decoration: none">
-                        {{ info.title }}
+                        {{ product.title }}
                       </a>
                     </div>
-                    <div>{{ info.price }}€</div>
+                    <div>{{ product.price }}€</div>
                     <div>
-                      <v-btn class="success" depressed elevation="2" outlined>
+                      <br />
+                      <v-btn
+                        class="btn-cart"
+                        elevation="2"
+                        rounded
+                        small
+                        color="#b4975a"
+                      >
                         <i class="fas fa-shopping-cart"></i>
                       </v-btn>
                     </div>
@@ -120,34 +115,18 @@
     </div>
   </v-app>
 </template>
-<style>
-.v-card--reveal {
-  align-items: center;
-  bottom: 0;
-  justify-content: center;
-  opacity: 0.8;
-  position: absolute;
-  width: 100%;
-}
-</style>
+
 <script>
 import Footer from "../components/Footer.vue";
+import Carousel from "../components/Carousel.vue";
 
 export default {
-  components: { Footer },
+  components: { Footer, Carousel },
   data: () => ({
     message: "SHOP",
-    info: null,
+    products: null,
     loading: true,
     errored: false,
-    colors: [
-      "indigo",
-      "warning",
-      "pink darken-2",
-      "red lighten-1",
-      "deep-purple accent-4",
-    ],
-    slides: ["First", "Second", "Third", "Fourth", "Fifth"],
     breadcrums: [
       {
         text: "Home",
@@ -170,9 +149,9 @@ export default {
   }),
   mounted() {
     this.$axios
-      .get("http://localhost:8000/api/products")
+      .get("http://localhost:8000/api/products/")
       .then((response) => {
-        this.info = response.data;
+        this.products = response.data;
       })
       .catch((error) => {
         console.log(error);

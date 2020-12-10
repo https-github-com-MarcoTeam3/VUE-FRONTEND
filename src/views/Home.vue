@@ -1,26 +1,26 @@
 <template>
   <div>
-    <v-container style="text-align: center;">
+    <v-container class="pt-12" style="text-align: center;">
       <h2>
-      <vue-typer
-        :text="['BLACK FRIDAY!!', 'MERRY CHRISTMAS', '-50% ALL WATCH']"
-        :repeat="Infinity"
-        :shuffle="false"
-        initial-action="typing"
-        :pre-type-delay="70"
-        :type-delay="70"
-        :pre-erase-delay="2000"
-        :erase-delay="250"
-        erase-style="backspace"
-        :erase-on-complete="false"
-        caret-animation="solid"
-      ></vue-typer>
+        <vue-typer
+          :text="['BLACK FRIDAY!!', 'MERRY CHRISTMAS', '-50% ALL WATCH']"
+          :repeat="Infinity"
+          :shuffle="false"
+          initial-action="typing"
+          :pre-type-delay="70"
+          :type-delay="70"
+          :pre-erase-delay="2000"
+          :erase-delay="250"
+          erase-style="backspace"
+          :erase-on-complete="false"
+          caret-animation="solid"
+        ></vue-typer>
       </h2>
     </v-container>
     <div class="container mt-4">
       <h2 style="text-align: center;">Explore Popular Categories</h2>
     </div>
-    <div class="container">
+    <div>
       <v-carousel hide-delimiters>
         <v-carousel-item
           v-for="(item, i) in items"
@@ -29,13 +29,12 @@
         ></v-carousel-item>
       </v-carousel>
     </div>
-    <v-container>
+    <v-container class="pt-12">
       <h2 style="text-align: center;">
-        More than <strong class="red--text">50</strong> brands in
-        stock
+        More than <strong class="red--text">50</strong> brands in stock
       </h2>
     </v-container>
-    <v-container>
+    <v-container class="pt-12">
       <v-row>
         <v-col cols="4" sm="2">
           <v-img
@@ -45,7 +44,7 @@
 
         <v-col cols="2" sm="2">
           <v-img
-            src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_24-383e327d60d2139fb186507a45652764.png"
+            src="https://i.postimg.cc/RCsy1dV8/585e9f11cb11b227491c3502.png"
           >
             <div class="fill-height bottom-gradient"></div>
           </v-img>
@@ -53,14 +52,14 @@
 
         <v-col cols="2" sm="2">
           <v-img
-            src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_18-f3f6266331b95cfa3cdd11a48c1562b1.png"
+            src="https://i.postimg.cc/XqLCFXbS/58429f65a6515b1e0ad75aed.png"
           >
             <div class="fill-height repeating-gradient"></div>
           </v-img>
         </v-col>
         <v-col cols="2" sm="2">
           <v-img
-            src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_32-27e9e26456ad9896cd9d3215c1939aa1.png"
+            src="https://i.postimg.cc/pT2VjCXr/5a1ac46ef65d84088faf132c.png"
           >
             <div class="fill-height repeating-gradient"></div>
           </v-img>
@@ -74,7 +73,7 @@
         </v-col>
         <v-col cols="2" sm="2">
           <v-img
-            src="https://d2yac1vwzyjed0.cloudfront.net/assets/front/catalog/brands_logo/brand_69-1fae709476e0b6e2660bcdee0c60345d.png"
+            src="https://i.postimg.cc/dQh3jWjZ/5a1ac93bf65d84088faf137c.png"
           >
             <div class="fill-height repeating-gradient"></div>
           </v-img>
@@ -174,7 +173,7 @@
 
                     <div class="text-center">
                       <v-btn href="/shop" class="ma-2" outlined color="info">
-                        Explore
+                        More
                       </v-btn>
                     </div>
                   </v-card>
@@ -226,17 +225,22 @@ export default {
 
 <style>
 @keyframes rocking {
-  0%,100% {transform: rotateZ(-10deg);}
-  50%     {transform: rotateZ(10deg);}
+  0%,
+  100% {
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    transform: rotateZ(10deg);
+  }
 }
 .vue-typer {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 .vue-typer .custom.char.typed {
   color: #960000;
 }
 .vue-typer .custom.char.selected {
-  color: #E91E63;
+  color: #e91e63;
 }
 
 .vue-typer .custom.caret {
@@ -247,7 +251,6 @@ export default {
 }
 .vue-typer .custom.caret.selecting {
   display: inline-block;
-  background-color: #E91E63;
+  background-color: #e91e63;
 }
-
 </style>

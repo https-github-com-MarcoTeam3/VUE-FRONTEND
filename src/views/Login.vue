@@ -1,13 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">SGM SHOP</a>
-      
-          <li class="nav-item">
-            <a class="nav-link" href="/">home</a>
-          </li>
-    </nav>
-    <div class="container">
+    <div class="pt-12 container">
       <h1 class="text-center">Login</h1>
       <div class="card">
         <div class="card-body">
@@ -78,4 +71,3 @@ export default {
   },
 };
 </script>
-

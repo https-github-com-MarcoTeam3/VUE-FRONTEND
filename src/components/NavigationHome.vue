@@ -115,7 +115,7 @@ export default {
 
 <style>
 .router-link-exact-active {
-  color: #ffffff !important;
+  color: #b4975a !important;
   transition: all 0.25s;
 }
 .navbar {

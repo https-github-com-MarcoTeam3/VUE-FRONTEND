@@ -1,11 +1,5 @@
 <template>
   <div>
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">SGM SHOP</a>
-      <li class="nav-item">
-        <a class="nav-link" href="/">home</a>
-      </li>
-    </nav>
     <div class="container">
       <h1>Dashboard</h1>
       <!-- <div class="card">

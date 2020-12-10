@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-    <NavigationHome/>
+    <NavigationHome />
     <router-view />
   </v-app>
 </template>
@@ -10,17 +10,20 @@ import NavigationHome from "@/components/NavigationHome.vue";
 
 export default {
   components: {
-    NavigationHome
-  }, 
+    NavigationHome,
+  },
 
   mounted() {
     this.$store.commit("LOGIN", !!localStorage.getItem("token"));
-  }
+  },
 };
 </script>
 
 <style>
 .h-screen {
   height: 100vh;
+}
+#app {
+  background: #eaeded;
 }
 </style>

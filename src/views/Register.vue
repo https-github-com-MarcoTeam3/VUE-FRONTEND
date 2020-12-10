@@ -1,13 +1,5 @@
 <template>
   <div>
-    <div>
-      <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">SGM SHOP</a>
-        <li class="nav-item">
-          <a class="nav-link" href="/">home</a>
-        </li>
-      </nav>
-    </div>
     <div class="home col-5 mx-auto py-5 mt-5">
       <h1 class="text-center">Register</h1>
       <div class="card">
@@ -83,9 +75,9 @@ export default {
         name: "",
         email: "",
         password: "",
-        password_confirmation: ""
+        password_confirmation: "",
       },
-      errors: []
+      errors: [],
     };
   },
 
@@ -100,7 +92,7 @@ export default {
             this.errors = error.response.data.errors;
           }
         });
-    }
-  }
+    },
+  },
 };
 </script>
