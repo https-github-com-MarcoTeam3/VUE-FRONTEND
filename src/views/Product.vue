@@ -63,7 +63,7 @@ export default {
   }),
   mounted() {
     this.$axios
-      .get(`http://localhost:8000/api/products/${this.$route.params.id}`)
+      .get(`https://thawing-ravine-80622.herokuapp.com/api/products/${this.$route.params.id}`)
       .then((response) => {
         this.product = response.data;
       })
