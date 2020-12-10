@@ -21,7 +21,7 @@
                 class="nav-item nav-link"
                 :to="{ name: 'Cart' }"
                 ><i class="fas fa-shopping-cart"></i
-              ></router-link>
+              >{{ cartcount }}</router-link>
             </li>
 
             <li>
@@ -99,8 +99,11 @@ export default {
   },
   computed: {
     ...mapGetters(["isLoggedIn"]),
+       cartcount() {
+      return this.$store.state.cart_count;
+    },
   },
-
+  
   methods: {
     logout() {
       User.logout().then(() => {
@@ -108,6 +111,9 @@ export default {
         this.$store.commit("LOGIN", false);
         this.$router.push({ name: "Home" });
       });
+    },
+      go_to_cart() {
+      this.$router.push("/cart");
     },
   },
 };

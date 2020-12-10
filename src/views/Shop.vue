@@ -73,7 +73,7 @@
                       <div
                         v-if="hover"
                         class="d-flex transition-fast-in-fast-out white darken-2 v-card--reveal display-3 white--text"
-                        style="height: 100%;"
+                        style="height: 100%"
                       >
                         <router-link
                           :to="{ name: 'Product', params: { id: product.id } }"
@@ -93,6 +93,7 @@
                     <div>
                       <br />
                       <v-btn
+                        @click="add_cart(product)"
                         class="btn-cart"
                         elevation="2"
                         rounded
@@ -121,6 +122,7 @@ import Footer from "../components/Footer.vue";
 import Carousel from "../components/Carousel.vue";
 
 export default {
+
   components: { Footer, Carousel },
   data: () => ({
     message: "SHOP",
@@ -158,6 +160,13 @@ export default {
         this.errored = true;
       })
       .finally(() => (this.loading = false));
+  },
+  methods: {
+    add_cart(product) {
+      this.$store.state.cart_count += 1;
+      this.$store.state.cart.push(product);
+      console.log(this.$store.state.cart);
+    },
   },
 };
 </script>
