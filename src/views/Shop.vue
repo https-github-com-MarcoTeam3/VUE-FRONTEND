@@ -116,26 +116,16 @@
     </div>
   </v-app>
 </template>
-
 <script>
 import Footer from "../components/Footer.vue";
 import Carousel from "../components/Carousel.vue";
+import Watches from "../components/Watches.vue";
 
 export default {
 
   components: { Footer, Carousel },
   data: () => ({
     message: "SHOP",
-    products: null,
-    loading: true,
-    errored: false,
-    breadcrums: [
-      {
-        text: "Home",
-        disabled: false,
-        href: "/",
-      },
-    ],
     items: [
       {
         id: 1,

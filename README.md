@@ -16,6 +16,8 @@
 
 ```
 npm install
+npm install express
+npm install @vue/cli
 ```
 
 ### Compiles and hot-reloads for development
