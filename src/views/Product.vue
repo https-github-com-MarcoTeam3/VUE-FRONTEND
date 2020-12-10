@@ -40,7 +40,12 @@
               :value="1"
               dense
             ></v-text-field>
-            <v-btn class="success white--text" outlined tile dense
+            <v-btn
+              class="success white--text"
+              outlined
+              tile
+              dense
+              @click="add_cart()"
               ><v-icon>mdi-cart</v-icon> ADD TO CART</v-btn
             >
             <v-btn class="ml-4" outlined tile>ADD TO WISHLIST</v-btn>
@@ -58,9 +63,16 @@ import Footer from "../components/Footer.vue";
 export default {
   components: { Footer },
   data: () => ({
-    product: null,
+    product: [],
     rating: 4.5,
   }),
+  methods: {
+    add_cart() {
+      this.$store.state.cart_count += 1;
+      this.$store.state.cart.push(this.product);
+      console.log(this.$store.state.cart);
+    },
+  },
   mounted() {
     this.$axios
       .get(`https://thawing-ravine-80622.herokuapp.com/api/products/${this.$route.params.id}`)
