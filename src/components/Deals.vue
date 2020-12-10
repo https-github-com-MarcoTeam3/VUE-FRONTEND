@@ -22,7 +22,7 @@
                     </v-card-text>
 
                     <div class="text-center">
-                      <v-btn href="/shop" class="ma-2" outlined color="info">
+                      <v-btn href="/Shop" class="ma-2" outlined color="info">
                         More
                       </v-btn>
                     </div>
@@ -45,7 +45,7 @@
                     </v-card-text>
 
                     <div class="text-center">
-                      <v-btn href="/shop" class="ma-2" outlined color="info">
+                      <v-btn href="/Shop" class="ma-2" outlined color="info">
                         More
                       </v-btn>
                     </div>
@@ -68,7 +68,7 @@
                     </v-card-text>
 
                     <div class="text-center">
-                      <v-btn href="/shop" class="ma-2" outlined color="info">
+                      <v-btn href="/Shop" class="ma-2" outlined color="info">
                         More
                       </v-btn>
                     </div>
@@ -91,7 +91,7 @@
                     </v-card-text>
 
                     <div class="text-center">
-                      <v-btn href="/shop" class="ma-2" outlined color="info">
+                      <v-btn href="/Shop" class="ma-2" outlined color="info">
                         More
                       </v-btn>
                     </div>
