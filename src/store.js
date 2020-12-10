@@ -46,18 +46,17 @@ export default new Vuex.Store({
 
   actions: {
     loadProducts({ commit }) {
-      axios.get(`http://localhost:8000/api/products`, {
+      axios.get(`https://thawing-ravine-80622.herokuapp.com/api/products`, {
       }).then((response) => {
         commit("SET_Products", response.data);
       });
     },
     changeProducts() {
-      axios.post("http://localhost:8000/api/products", {
+      axios.post("https://thawing-ravine-80622.herokuapp.com/api/products", {
         body: JSON.stringify(
           { title: "foo", body: "bar", userId: 1 }
         ),
       }).then((response) => {
-        console.log(response);
         this.commit("UPDATE_Products", response.data);
       });
     }
