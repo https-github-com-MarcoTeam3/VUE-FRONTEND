@@ -7,6 +7,7 @@ import Dashboard from "../views/Dashboard.vue";
 import Shop from "../views/Shop.vue";
 import Cart from "../views/Cart.vue";
 import Product from "../views/Product.vue";
+import Admin from "../views/Admin.vue";
 
 Vue.use(VueRouter);
 
@@ -48,6 +49,12 @@ const routes = [
     path: "/dashboard",
     name: "Dashboard",
     component: Dashboard,
+    meta: { authOnly: true }
+  },
+  {
+    path: "/Admin",
+    name: "Admin",
+    component: Admin,
     meta: { authOnly: true }
   }
 ];

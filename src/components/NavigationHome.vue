@@ -64,6 +64,14 @@
                 >Dashboard</router-link
               >
             </li>
+             <li>
+              <router-link
+                v-if="isLoggedIn"
+                class="nav-item nav-link"
+                :to="{ name: 'Admin' }"
+                >Admin</router-link
+              >
+            </li>
             <li>
               <a
                 class="nav-item nav-link"
