@@ -6,7 +6,9 @@
         <div class="col-sm-12 col-md-6">
           <h6>About</h6>
           <p class="text-justify">
-            Lorem, ipsum. <i>Lorem ipsum dolor sit amet. </i> Lorem ipsum dolor
+             <i> Since 1984, SMG INC has helped clients and partners grow and thrive throughthe power of data, analytics solutions.
+                 Our more than 400 employees aroundthe Europe are dedicated to this unique purpose, and we are guided byimportant values that make us the established leader in business decisioningdata and analytical insights.
+                 Our data & insights are valuable at all phases of abusiness lifecycle and whatever the economic environment.</i> 
             
           </p>
         </div>
