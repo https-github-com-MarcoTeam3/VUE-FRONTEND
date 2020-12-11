@@ -7,9 +7,7 @@
                         <v-card-title>{{ user.name }}</v-card-title>
                             <v-card-text>{{ user.email }}</v-card-text>
                             <router-link class="nav-item nav-link"
-                                :to="{ name: 'Dashboard' }"
-                                tag="v-btn"
-                                >
+                                :to="{ name: 'Dashboard' }">
                                 <v-btn color="success">
                                 <span>Edit</span>
                                 </v-btn>
