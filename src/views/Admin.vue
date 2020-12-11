@@ -14,7 +14,7 @@
                                 <span>Edit</span>
                                 </v-btn>
                             </router-link>
-                            <v-btn color="error" @click="delete_user()">Supprimer</v-btn>
+                            <v-btn color="error" @click="delete_user(user.id)">Supprimer</v-btn>
                     </v-card>
                 </v-col>
             </v-row>
@@ -40,8 +40,11 @@ export default {
       .finally(() => (this.loading = false));
   },
   methods: {
-      delete_user() {
-      this.user;
+      delete_user(id) {
+        
+        this.$axios
+      .delete(`https://thawing-ravine-80622.herokuapp.com/api/user/${id}`)
+      
     },
   }
 }
