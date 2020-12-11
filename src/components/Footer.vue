@@ -7,8 +7,7 @@
           <h6>About</h6>
           <p class="text-justify">
             Lorem, ipsum. <i>Lorem ipsum dolor sit amet. </i> Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Alias nostrum molestiae
-            voluptatibus explicabo ullam accusamus?.
+            
           </p>
         </div>
 
@@ -27,17 +26,17 @@
         <div class="col-xs-6 col-md-3">
           <h6>Quick Links</h6>
           <ul class="footer-links">
-            <li><a href="http://scanfcode.com/about/">About Us</a></li>
-            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
             <li>
-              <a href="http://scanfcode.com/contribute-at-scanfcode/"
+              <a href="#"
                 >Contribute</a
               >
             </li>
             <li>
-              <a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a>
+              <a href="#">Privacy Policy</a>
             </li>
-            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+            <li><a href="#">Sitemap</a></li>
           </ul>
         </div>
       </div>
